@@ -1,0 +1,33 @@
+﻿<Window x:Class="HyperPeer.Loader"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HyperPeer"
+        mc:Ignorable="d"
+        Title="Hyper Peer" Height="640" Width="260" WindowStyle="None" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ResizeMode="CanResize" AllowsTransparency="True" MinWidth="640" MinHeight="260" MaxWidth="260" MaxHeight="640">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CornerRadius="10" ResizeBorderThickness="10,10,2,10" GlassFrameThickness="5" UseAeroCaptionButtons="False" CaptionHeight="0"/>
+    </WindowChrome.WindowChrome>
+    <Window.Resources>
+        <ResourceDictionary Source="DarkMode.xaml"></ResourceDictionary>
+    </Window.Resources>
+    <Window.Background>
+        <SolidColorBrush Color="White" Opacity="0"/>
+    </Window.Background>
+    <Border Background="{StaticResource DefaultBackground}" Style="{StaticResource Window}">
+        <Grid VerticalAlignment="Center" MouseLeftButtonDown="Drag" Height="640">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Height="640" Width="640">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,160,0,0">
+                    <Ellipse x:Name="spinLogo" Width="128" Height="128" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="/logo.png" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <TextBlock HorizontalAlignment="Center" FontFamily="Segoe UI Variable Text Semibold" FontSize="36">Hyper Peer</TextBlock>
+                </StackPanel>
+                <TextBlock x:Name="loadingText" HorizontalAlignment="Center" FontFamily="Segoe UI Variable Text Light" FontSize="20">Loading...</TextBlock>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
